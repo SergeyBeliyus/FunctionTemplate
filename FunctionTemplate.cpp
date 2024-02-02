@@ -2,17 +2,19 @@
 #include <array>
 
 
-template <typename Type> void pow(const Type a) {
+template <typename Type> 
+void pow(const Type a) {
 	std::cout << "[IN]: " << a << std::endl;
 	std::cout << "[OUT]: " << a*a << std::endl;
 	return;
 }
 
-template <typename Type> void pow(const Type* a, size_t size) {
+template <typename Type>
+void pow(const Type* a, size_t size) {
 	std::cout << "[IN]: ";
 	for (size_t i = 0; i < (size - 1); i++) {
 		std::cout << a[i];
-		if (i != size - 1) {
+		if (i != size - 2) {
 			std::cout << ", ";
 		}
 	}
@@ -22,7 +24,7 @@ template <typename Type> void pow(const Type* a, size_t size) {
 	std::cout << "[OUT]: ";
 	for (size_t i = 0; i < (size - 1); i++) {
 		std::cout << a[i] * a[i];
-		if (i != size - 1) {
+		if (i != size - 2) {
 			std::cout << ", ";
 		}
 	}
